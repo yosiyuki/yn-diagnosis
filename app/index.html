@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+    body {
+      background-color: #FEFFEF;
+    }
+    #yes-no {
+      margin: 3em auto;
+      width: 30em;
+    }
+    </style>
+</head>
+<body>
+    <div id="yes-no"></div>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/yn-diagnosis.js"></script>
+    <script type="text/javascript">
+    //<[![
+    $(document).ready(function() {
+        var answers = [
+            { id: 1, text: "カレーが大好き", img: "", yes: 2, no: 3 },
+            { id: 2, text: "ハヤシライスも好き", img: "", yes: 4, no: 7 },
+            { id: 3, text: "カレーうどんは好きじゃない", img: "", yes: 5, no: 6 },
+            { id: 4, text: "ハンバーグは好き", img: "", yes: 6, no: 5 },
+            { id: 5, text: "カレーキングだね", img: "" },
+            { id: 6, text: "カレー凡人だね", img: "" },
+            { id: 7, text: "カレー貧民だね", img: "" },
+        ];
+        $('#yes-no').ynDiagnosis(answers, { debug: true });
+    });
+    //]]>
+    </script>
+</body>
+</html>
