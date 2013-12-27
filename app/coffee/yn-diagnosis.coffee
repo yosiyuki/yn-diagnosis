@@ -23,8 +23,9 @@ $.fn.extend
       content = $('<div>').addClass(settings.contentClass)
       content.append($('<div>').addClass('ynText').text(data.text))
       if data.img
-        image = $('<img>').attr('src', data.img).css('width', '100%')
-        content.append(image)
+        image = $('<img>').attr('src', data.img)
+        imageWrapper = $('<div>').addClass('ynImage')
+        content.append(imageWrapper.append(image))
       if data.yes
         buttons = $('<div>').addClass('ynButtons')
         buttons.append($('<a>').attr('href', '#').data('next', data.yes)
