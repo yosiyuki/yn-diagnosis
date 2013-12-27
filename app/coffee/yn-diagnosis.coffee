@@ -22,6 +22,9 @@ $.fn.extend
     createNode = (data) ->
       content = $('<div>').addClass(settings.contentClass)
       content.append($('<div>').addClass('ynText').text(data.text))
+      if data.img
+        image = $('<img>').attr('src', data.img).css('width', '100%')
+        content.append(image)
       if data.yes
         buttons = $('<div>').addClass('ynButtons')
         buttons.append($('<a>').attr('href', '#').data('next', data.yes)
